@@ -19,6 +19,7 @@
                               'http://loinc.org|2085-9', // HDL
                               'http://loinc.org|2089-1', //LDL
                               'http://loinc.org|85354-9', //Blood pressure
+                              'http://loinc.org|3048-6', //Triglyceride
                               'http://loinc.org|8310-5' // Temperature
                              ]
                       }
@@ -46,6 +47,7 @@
           var hdl = byCodes('2085-9');
           var ldl = byCodes('2089-1');
           var tmp = byCodes('8310-5');
+          var trg = byCodes('3048-6');
 
           var p = defaultPatient();
           p.birthdate = patient.birthDate;
@@ -66,6 +68,7 @@
           p.hdl = getQuantityValueAndUnit(hdl[0]);
           p.ldl = getQuantityValueAndUnit(ldl[0]);
           p.tmp = getQuantityValueAndUnit(tmp[0]);
+          p.trg = getQuantityValueAndUnit(trg[0]);
 
           ret.resolve(p);
         });
@@ -91,6 +94,7 @@
       diastolicbp: {value: ''},
       ldl: {value: ''},
       hdl: {value: ''},
+      trg: {value: ''},
       tmp: {value: ''},
     };
   }
@@ -136,6 +140,7 @@
     $('#diastolicbp').html(p.diastolicbp);
     $('#ldl').html(p.ldl);
     $('#hdl').html(p.hdl);
+    $('#trg').html(p.trg);
     $('#tmp').html(p.tmp);
   };
 
