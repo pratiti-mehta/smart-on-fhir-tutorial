@@ -18,7 +18,7 @@
                         $or: ['http://loinc.org|8302-2', // Body Height  
                               'http://loinc.org|2085-9', // HDL
                               'http://loinc.org|2089-1', //LDL
-                              'http://loinc.org|85354-9' //Blood pressure
+                              'http://loinc.org|85354-9', //Blood pressure
                               'http://loinc.org|8310-5' // Temperature
                              ]
                       }
