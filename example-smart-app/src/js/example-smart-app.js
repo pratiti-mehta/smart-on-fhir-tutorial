@@ -33,6 +33,7 @@
 
           var fname = '';
           var lname = '';
+          var contact = patient.contact;
 
           if (typeof patient.name[0] !== 'undefined') {
             fname = patient.name[0].given.join(' ');
@@ -51,6 +52,7 @@
           p.gender = gender;
           p.fname = fname;
           p.lname = lname;
+          p.contact = contact;
           p.height = getQuantityValueAndUnit(height[0]);
 
           if (typeof systolicbp != 'undefined')  {
@@ -83,6 +85,7 @@
       lname: {value: ''},
       gender: {value: ''},
       birthdate: {value: ''},
+      contact: {value: ''},
       height: {value: ''},
       systolicbp: {value: ''},
       diastolicbp: {value: ''},
@@ -127,6 +130,7 @@
     $('#lname').html(p.lname);
     $('#gender').html(p.gender);
     $('#birthdate').html(p.birthdate);
+    $('#contact').html(p.contact);
     $('#height').html(p.height);
     $('#systolicbp').html(p.systolicbp);
     $('#diastolicbp').html(p.diastolicbp);
